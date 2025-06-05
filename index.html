@@ -97,8 +97,7 @@
 
     function startGame() {
       showSection('game-section');
-      startTimer();
-      showRiddle();
+      
     }
 
     function showSection(id) {
@@ -106,7 +105,10 @@
       document.getElementById(id).classList.remove('hidden');
     }
 
-    let riddles = JSON.parse(localStorage.getItem("riddles") || "[]");
+    let riddles = [];
+fetch('riddles.json')
+  .then(res => res.json())
+  .then(data => { riddles = data; showRiddle(); startTimer(); });
     let current = 0;
     let time = 300;
     let timerInterval;

@@ -1,5 +1,12 @@
 
-let riddles = JSON.parse(localStorage.getItem("riddles") || "[]");
+let riddles = [];
+
+fetch("riddles.json")
+  .then(res => res.json())
+  .then(data => {
+    riddles = data;
+    renderRiddles();
+  });
 
 function renderRiddles() {
   const list = document.getElementById("riddle-list");
@@ -8,16 +15,14 @@ function renderRiddles() {
     const item = document.createElement("li");
     item.className = "bg-gray-700 p-4 rounded flex justify-between items-center";
     item.draggable = true;
-    item.ondragstart = e => {
-      e.dataTransfer.setData("text/plain", i);
-    };
+    item.ondragstart = e => e.dataTransfer.setData("text/plain", i);
     item.ondragover = e => e.preventDefault();
     item.ondrop = e => {
       const from = parseInt(e.dataTransfer.getData("text/plain"));
       const to = i;
-      const item = riddles.splice(from, 1)[0];
-      riddles.splice(to, 0, item);
-      saveAndRender();
+      const moved = riddles.splice(from, 1)[0];
+      riddles.splice(to, 0, moved);
+      renderRiddles();
     };
     item.innerHTML = `
       <div>
@@ -33,7 +38,6 @@ function renderRiddles() {
 }
 
 function saveAndRender() {
-  localStorage.setItem("riddles", JSON.stringify(riddles));
   renderRiddles();
 }
 
@@ -42,7 +46,7 @@ function editRiddle(index) {
   document.getElementById("edit-index").value = index;
   document.getElementById("question").value = r.question;
   document.getElementById("answer").value = r.answer;
-  document.getElementById("hint").value = r.hint;
+  document.getElementById("hint").value = r.hint || "";
   document.getElementById("intro").value = r.intro || "";
   document.getElementById("description").value = r.description || "";
   document.getElementById("image").value = r.image || "";
@@ -89,9 +93,7 @@ document.getElementById("importFile").addEventListener("change", e => {
   const reader = new FileReader();
   reader.onload = evt => {
     riddles = JSON.parse(evt.target.result);
-    saveAndRender();
+    renderRiddles();
   };
   reader.readAsText(file);
 });
-
-renderRiddles();
