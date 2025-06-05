@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jurassic Admin</title>
+  <script src="admin.js" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans p-4">
+  <h1 class="text-3xl font-bold mb-4">🦖 Jurassic Escape - Admin Panel</h1>
+
+  <form id="riddle-form" class="grid grid-cols-1 md:grid-cols-2 gap-4 bg-gray-800 p-4 rounded-lg shadow mb-6">
+    <input type="hidden" id="edit-index" />
+    <div>
+      <label for="question" class="block font-bold">Vraag</label>
+      <input type="text" id="question" required class="w-full px-3 py-2 rounded text-black"/>
+    </div>
+    <div>
+      <label for="answer" class="block font-bold">Antwoord</label>
+      <input type="text" id="answer" required class="w-full px-3 py-2 rounded text-black"/>
+    </div>
+    <div>
+      <label for="hint" class="block font-bold">Hint</label>
+      <input type="text" id="hint" class="w-full px-3 py-2 rounded text-black"/>
+    </div>
+    <div>
+      <label for="intro" class="block font-bold">Introductietekst (voor de vraag)</label>
+      <input type="text" id="intro" class="w-full px-3 py-2 rounded text-black" placeholder="bijv. Je sluipt langs de jungle..."/>
+    </div>
+    <div>
+      <label for="description" class="block font-bold">Beschrijving</label>
+      <input type="text" id="description" class="w-full px-3 py-2 rounded text-black"/>
+    </div>
+    <div>
+      <label for="image" class="block font-bold">Afbeeldingspad (vraag)</label>
+      <input type="text" id="image" class="w-full px-3 py-2 rounded text-black" placeholder="bijv. assets/trex.jpg"/>
+    </div>
+    <div>
+      <label for="background" class="block font-bold">Achtergrondpad</label>
+      <input type="text" id="background" class="w-full px-3 py-2 rounded text-black" placeholder="bijv. assets/jungle.jpg"/>
+    </div>
+    <div class="md:col-span-2">
+      <button type="submit" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+        ✅ Opslaan
+      </button>
+    </div>
+  </form>
+
+  <div class="flex justify-between items-center mb-2">
+    <h2 class="text-xl font-bold">📋 Vragenlijst</h2>
+    <div>
+      <input type="file" id="importFile" class="text-sm" />
+      <button onclick="exportRiddles()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded ml-2">📤 Exporteer</button>
+    </div>
+  </div>
+
+  <ul id="riddle-list" class="space-y-4"></ul>
+</body>
+</html>
