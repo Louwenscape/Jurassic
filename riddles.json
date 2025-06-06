@@ -1,0 +1,20 @@
+[
+  {
+    "question": "Wat is de code?",
+    "answer": "113269",
+    "hint": "Welke getallen zie je in de tekst?",
+    "intro": "Casey Martens stond gebogen over een fossiel toen de grond begon te trillen. Een diepe dreun vulde de lucht. Boven hem ontplofte een controlepost in een vurige bal. Sirenes loeiden. Hij keek op — een rookpluim steeg op achter het lab. Plots kraakte zijn portofoon. “Noodprotocol! Park beveiliging faalt—alle dino’s zijn los!”  Casey rende richting het hek, maar het was op slot. Een cijferslot! 6 cijfers. Op het hek staat: “De Brachiosaurus was een van de oudste en grootste dinosaurussen die ooit heeft geleefd. Geen zorgen, deze gigant was een echte planteneter. Omdat hij bladeren van hoge bomen at, moest hij wel zo groot zijn! Met zijn indrukwekkende nek van dertien meter kon hij een totale hoogte van wel zesentwintig meter bereiken.. zo hoog als een flatgebouw van negen verdiepingen!”",
+    "description": "test",
+    "image": "assets/cijferslot.jpg",
+    "background": ""
+  },
+  {
+    "question": "Wie heeft er een poepje gelaten",
+    "answer": "Jill",
+    "hint": "",
+    "intro": "",
+    "description": "",
+    "image": "assets/cijferslot.jpg",
+    "background": ""
+  }
+]
