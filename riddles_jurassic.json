@@ -21,9 +21,9 @@
       "buttons": {
         "nl": [
           {
-            "label": "",
-            "action": "",
-            "content": ""
+            "label": "boek",
+            "action": "overlay",
+            "content": "assets/boek.html"
           }
         ],
         "en": []
