@@ -1,0 +1,15 @@
+[
+  {
+    "file": "riddles_jurassic.json",
+    "page": "jurassic_game.html",
+    "img": "assets/jurassic_icon.jpg",
+    "title": {
+      "nl": "Jurassic Escape",
+      "en": "Jurassic Escape"
+    },
+    "desc": {
+      "nl": "Ontsnap uit het park voor de dino's je vinden! Los raadsels op en overleef.",
+      "en": "Escape the park before the dinosaurs find you! Solve riddles and survive."
+    }
+  }
+]

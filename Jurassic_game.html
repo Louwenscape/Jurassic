@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Jurassic Escape</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: url('assets/jungle_bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: sans-serif;
+    }
+    .btn { transition: transform 0.15s; }
+    .btn:active { transform: scale(0.97); }
+    .fade-in { animation: fadeIn 0.8s ease-in; }
+    @keyframes fadeIn {
+      from { opacity: 0 }
+      to { opacity: 1 }
+    }
+  </style>
+</head>
+<body class="flex min-h-screen items-center justify-center fade-in">
+  <div class="bg-black bg-opacity-80 p-6 rounded-xl w-full max-w-xl text-center text-white shadow-xl">
+    <h1 class="text-3xl font-bold mb-4">🦖 Jurassic Escape</h1>
+    <div id="timer" class="mb-2 text-yellow-200 font-bold"></div>
+    <div id="intro" class="mb-2 text-lg italic text-gray-300"></div>
+    <div id="desc" class="mb-2 text-base text-gray-400"></div>
+    <div id="question" class="mb-4 text-2xl font-bold"></div>
+    <img id="qimg" src="" class="mx-auto mb-3 rounded-lg max-h-40 hidden" />
+    <input id="answer" class="text-black p-2 mb-4 w-full max-w-md rounded" placeholder="Typ je antwoord">
+    <div id="buttons" class="space-x-2 mb-2"></div>
+    <button onclick="checkAnswer()" class="btn bg-yellow-400 text-black font-bold px-4 py-2 rounded mb-2 shadow">Beantwoord</button>
+    <p id="hint" class="mt-2 italic text-yellow-200"></p>
+  </div>
+
+  <!-- Overlay -->
+  <div id="overlay" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 hidden flex items-center justify-center z-50">
+    <div class="bg-white text-black p-6 rounded-lg max-w-lg shadow-2xl">
+      <div id="overlay-content" class="mb-4"></div>
+      <button onclick="closeOverlay()" class="bg-red-600 text-white px-4 py-2 rounded shadow">Sluit</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

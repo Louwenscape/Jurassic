@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Escape Room Game</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: url('assets/slot_bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+    .scenario-card {
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .scenario-card:active {
+      transform: scale(0.97);
+      box-shadow: 0 0 0 3px #facc15;
+    }
+    .fade-in {
+      animation: fadeIn 1s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0 }
+      to { opacity: 1 }
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-center items-center fade-in">
+  <div class="text-center bg-black bg-opacity-70 px-6 py-8 rounded-xl shadow-lg mt-10">
+    <h1 class="text-4xl font-extrabold mb-4 tracking-wide">🧩 ESCAPE ROOM GAME</h1>
+    <div class="mb-4">
+      <button id="lang-nl" class="bg-yellow-500 text-black font-bold px-4 py-2 rounded m-2">NL</button>
+      <button id="lang-en" class="bg-gray-300 text-black font-bold px-4 py-2 rounded m-2">EN</button>
+    </div>
+    <div id="scenarios" class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4"></div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>

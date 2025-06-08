@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - Escape Room</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background-color: #111; color: white; font-family: sans-serif; }
+    input, textarea, select { color: black !important; }
+    .question-card { background-color: #222; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem; }
+    .draggable { cursor: move; }
+    .lang-switch button {
+      margin-right: 0.5rem;
+      padding: 0.25rem 0.5rem;
+      background: #444;
+      color: white;
+      border-radius: 0.25rem;
+    }
+    .lang-switch button.active {
+      background: #facc15;
+      color: black;
+    }
+  </style>
+</head>
+<body class="p-6">
+  <h1 class="text-3xl mb-4">🔧 Beheer Escape Scenario's</h1>
+  <div class="mb-6">
+    <label class="mr-2">📁 Scenario:</label>
+    <select id="scenarioSelect" class="text-black px-2 py-1 rounded"></select>
+    <button onclick="createScenario()" class="ml-2 bg-green-600 hover:bg-green-700 px-3 py-1 rounded">Nieuw</button>
+    <button onclick="saveScenario()" class="ml-2 bg-blue-600 hover:bg-blue-700 px-3 py-1 rounded">Opslaan</button>
+    <input type="file" id="importFile" accept=".json" class="ml-2 inline" onchange="importScenario(this)">
+
+  </div>
+
+  <div class="mb-4 p-4 bg-gray-800 rounded">
+    <h2 class="text-xl font-bold mb-2">🎉 Eindscherm</h2>
+    <label class="block text-sm">Tekst NL</label>
+    <input id="endTextNl" class="w-full p-1 mb-2 rounded" />
+    <label class="block text-sm">Tekst EN</label>
+    <input id="endTextEn" class="w-full p-1 mb-2 rounded" />
+    <label class="block text-sm">Afbeelding URL</label>
+    <input id="endImage" class="w-full p-1 rounded" />
+  </div>
+
+  <div class="lang-switch mb-4">
+    <label class="mr-2 font-bold">🌐 Taal:</label>
+    <button onclick="setLang('nl')" id="btn-nl" class="active">NL</button>
+    <button onclick="setLang('en')" id="btn-en">EN</button>
+  </div>
+
+  <div id="questions" class="space-y-4"></div>
+  <button onclick="addQuestion()" class="mt-6 bg-yellow-600 hover:bg-yellow-700 px-4 py-2 rounded">+ Vraag toevoegen</button>
+
+  <script src="admin.js"></script>
+</body>
+</html>
