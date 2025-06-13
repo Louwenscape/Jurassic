@@ -2,33 +2,122 @@
   "questions": [
     {
       "question": {
+        "nl": "Typ Start om te beginnen"
+      },
+      "intro": {
+        "nl": "Proloog – Onderzoekszone 7, Regenwoudgebied – 17:42 uur"
+      },
+      "hint": {
+        "nl": "Type start"
+      },
+      "desc": {
+        "nl": "De vochtige hitte hing als een deken tussen de boomtoppen. Het regenwoud ademde; druppels vielen langzaam van bladeren, insecten zoemden door het schemerlicht. de zon zakte traag achter de groene muur van kruinen, en het gouden licht kleurde de modder onder zijn laarzen roestbruin.\nCasey Martens is onderzoeker bij Blackstone. Dat gekke investeerders weer dino's tot leven hebben laten wekken, heeft geleid dat Casey nu de baan heeft die niemand voor mogelijk hield.\n.\nCasey Martens knielde aan de rand van een open plek, zijn ademhaling gecontroleerd. Voor hem lag een afdruk — vers, diep, drie tenen. Raptor. En een grote ook.\n\nHij haalde zijn veldrecorder uit zijn borstzak.\n“Dag 42. Locatie: Onderzoekszone 7. Ik bevestig nieuwe activiteit. Sporen zijn recent — waarschijnlijk minder dan twee uur oud. Beweging richting oosthelling.”\nPlots hield hij zijn adem in.\nEen zacht, laag grommen vanuit het struikgewas. Ritselend blad. Casey keek op.\n\nBOEM.\nEen explosie scheurde de stilte aan flarden. Rook steeg op tussen de bomen, ergens bij het hoofdcomplex. De aarde beefde onder zijn knieën. Vogels zwermden krijsend omhoog.\n\nEen tweede knal — harder. Dichterbij.\n\nZijn portofoon kraakte tot leven.\n“Blackstone aan alle eenheden. Noodniveau vijf. Meerdere kooien open. We herhalen: meerdere kooien open. Evacueer nu!”\n\nCasey’s hart bonsde in zijn borst. Hij keek nog één keer naar de afdruk. Geen enkel systeem die Casey meer kon beschermen tegen de dino's op dit eiland.."
+      },
+      "answer": [
+        "Start",
+        "start",
+        "START"
+      ],
+      "background": "assets/start.jpg",
+      "image": "",
+      "buttons": {
+        "nl": [],
+        "en": []
+      }
+    },
+    {
+      "question": {
         "nl": "Wat is de code?"
       },
       "intro": {
-        "nl": "Casey Martens stond gebogen over een fossiel toen de grond begon te trillen. Een diepe dreun vulde de lucht. Boven hem ontplofte een controlepost in een vurige bal. Sirenes loeiden. Hij keek op — een rookpluim steeg op achter het lab. Plots kraakte zijn portofoon. “Noodprotocol! Park beveiliging faalt—alle dino’s zijn los!”  Casey rende richting het hek, maar het was op slot. Een cijferslot! 6 cijfers. Op het hek staat: “De Brachiosaurus was een van de oudste en grootste dinosaurussen die ooit heeft geleefd. Geen zorgen, deze gigant is een echte planteneter. Omdat hij bladeren van hoge bomen at, moest hij wel zo groot zijn! Met zijn indrukwekkende nek van dertien meter kon hij een totale hoogte van wel zesentwintig meter bereiken.. zo hoog als een flatgebouw van negen verdiepingen!”"
+        "nl": "De eerste explosie was gigantisch, de portofoon bevestigde de boodschap. Dit was foute boel..\n\nCasey rende door de varens, met zijn rug naar de brandende overblijfselen van onderzoekszone 7. In zijn oren suisde nog steeds de stem van het noodsysteem: “Evacueer nu.”\nHij kende deze jungle — hij wist waar de oude onderhoudsweg lag, waar ooit bevoorrading binnenkwam van de buitenwereld.\n\nZijn benen protesteerden. Maar hij wist: als hij die weg haalde, was er misschien nog een kans.\n\nUiteindelijk doemde het op: het ijzeren toegangshek 17B, een roestige poort in het rasterhekwerk.\nAan de zijkant: een elektronisch cijferslot, knipperend op accuvoeding.\n\nEen klein bordje erboven:\n\n"
       },
-      "hint": {
-        "nl": "Welke getallen zie je in de tekst?"
-      },
+      "hint": {},
       "desc": {
-        "nl": ""
+        "nl": "“De Brachiosaurus was een van de oudste en grootste dinosaurussen die ooit heeft geleefd. Geen zorgen, deze gigant was een echte planteneter. Omdat hij bladeren van hoge bomen at, moest hij wel zo groot zijn! Met zijn indrukwekkende nek van dertien meter kon hij een totale hoogte van wel zesentwintig meter bereiken.. zo hoog als een flatgebouw van negen verdiepingen!”"
       },
       "answer": [
         "113269"
       ],
-      "background": "assets/bg1.jpg",
-      "image": "assets/cijferslot.jpg",
+      "background": "assets/cijferslot.jpg",
+      "image": "",
+      "buttons": {
+        "nl": [],
+        "en": []
+      }
+    },
+    {
+      "question": {
+        "nl": "Wat is de code?"
+      },
+      "intro": {
+        "nl": "De regenwoudbodem daverde achter hem. Casey struikelde door het struikgewas, ademde zwaar. Takken zwiepten langs zijn gezicht, modder spatte op tot aan zijn knieën. Achter hem klonk gegrom — ongeduldig, roofzuchtig.\n\nHij bereikte een verharde modderweg, glibberig en verlaten. Toen zag hij het:\nEen moderne zwarte jeep, verlaten aan de kant. Portier open. Sleutelloos systeem.\n\nHij dook erin, sloeg de deur dicht. Het dashboard lichtte op —\nVergrendeld.\nEen touchscreen flikkerde. Beveiligde toegang vereist. Viercijferige startcode.\n\nOp de bijrijdersstoel lag een notitie, natgeregend maar leesbaar:\n"
+      },
+      "hint": {},
+      "desc": {
+        "nl": "Typ hier de notitie"
+      },
+      "answer": [
+        "1234"
+      ],
+      "background": "assets/bg2.jpg",
+      "image": "",
       "buttons": {
         "nl": [
           {
-            "label": "boek",
-            "action": "overlay",
-            "content": "assets/boek.html"
+            "label": "",
+            "action": "",
+            "content": ""
           }
         ],
         "en": []
       },
       "time": "300"
+    },
+    {
+      "question": {},
+      "intro": {
+        "nl": "Klik.\nDe motor startte. Achter hem: gekraak in het bos. Hij trapte het gaspedaal in.\n\nDe jeep slipte kort en schoot toen vooruit over de glibberige weg. Rook en nevel hingen laag tussen de bomen. Hij kende deze route — als hij de helling naar het noordelijke onderzoekscentrum haalde, kon hij misschien nog aansluiten bij de nood-evacuatie. Of tenminste een radio vinden.\n\nNa tien minuten scheurde hij een bocht om en daar lag het:\nHet betonnen bolwerk van het Blackstone Onderzoekscentrum, half in de berg gebouwd. De buitenhekken stonden open.\nTe open.\n\nCasey reed de tunnel in, de koplampen werpen hun licht op flikkerende TL-lampen. Binnen knipperde een groot scherm boven een gesloten lift:\n\n“NOODNIVEAU 5. EVACUATIE ACTIEF – LAATSTE TRANSPORT 18:00”\nHuidige tijd: 18:07\n\nZijn hart zakte. Te laat?\nHij rende naar het bedieningspaneel van de lift. Een code. Natuurlijk.\n\n“Toegangscode vereist. Alleen geautoriseerd personeel mag naar Lvl -2: Onderzoekshal.”"
+      },
+      "hint": {},
+      "desc": {},
+      "answer": [],
+      "background": "assets/bg3.jpg",
+      "image": "",
+      "buttons": {
+        "nl": [],
+        "en": []
+      }
+    },
+    {
+      "question": {},
+      "intro": {
+        "nl": "De lift kwam met een schokkende stop tot stilstand. Een doffe pieptoon, dan schuifdeuren die opengleden.\n\nCasey stapte het lage betonnen lab binnen. De lichten flikkerden onregelmatig. Koele lucht trok door de ruimte, gemengd met de geur van metaal, stof en gesmolten plastic. Her en der lagen papieren, omgevallen rekken, en een slingerende veiligheidshelm.\n\nHij liep behoedzaam verder. “Iemand hier?”\n\nToen — beweging.\nEen stalen kast in de hoek schudde even. Een klap.\nCasey rukte zijn zaklamp omhoog, klaar om te reageren.\n\n“Niet bijten, alsjeblieft…” kwam er zacht vanachter de kast.\n\nHij liep ernaartoe en kantelde het metalen gevaarte voorzichtig opzij. Daarachter zat iemand ineengedoken, haar haren in de war, een laboratoriumjas onder het stof.\n\nToen ze hem zag, slaakte ze een gil en dook weg.\n“Niet! Blijf weg!”\n\n“Jill?” riep Casey verbaasd. “Ik ben het!”\n\nZe staarde hem een seconde aan, ogen groot.\n“Casey? Jezus… ik dacht dat je… dat je klauwen had.” Ze ademde uit en liet haar hoofd zakken. “Ik zat hier opgesloten. Toen ik je hoorde, dacht ik: dit is het einde.”\n\nHij grijnsde. “Nee hoor. Nog niet. Kom je mee?”"
+      },
+      "hint": {},
+      "desc": {},
+      "answer": [],
+      "background": "assets/bg4.jpg",
+      "image": "",
+      "buttons": {
+        "nl": [],
+        "en": []
+      }
+    },
+    {
+      "question": {},
+      "intro": {
+        "nl": "Een rauwe, diepe brul.\nNiet ver weg.\n\nCasey verstijfde. Jill's ogen schoten naar de gang. “Dat was… achter de hoofdlift.”\n\nTrillende metalen. Een veraf tikkend geluid. Klauwen op beton?\n\nZe renden.\n\nLangs omgevallen stoelen, door half openstaande deuren, de gang in. Aan het eind zag Casey de rode lichten van de nooduitgangssluis. Een zware schuifdeur, net nog open — erboven stond:\n“Evacuatiezone – Dock B”\n\nHij duwde op het paneel. Niets.\nEen touchscreen flikkerde aan:\n\n\"Beveiliging geactiveerd – dubbele verificatie vereist\"\n“Beide gebruikers moeten hun code invoeren, gebaseerd op hun onderzoeksindex.”\n\nJill vloekte. “Dat verdomde systeem. Ze gebruiken onze persoonlijke codenaamvolgorde. Ik weet de mijne nog.”\n\n"
+      },
+      "hint": {},
+      "desc": {},
+      "answer": [],
+      "background": "",
+      "image": "",
+      "buttons": {
+        "nl": [],
+        "en": []
+      }
     }
   ],
   "endScreen": {
@@ -36,7 +125,7 @@
       "text": "Je bent ontsnapt!"
     },
     "en": {
-      "text": "You've escaped!"
+      "text": ""
     },
     "image": ""
   }

@@ -6,10 +6,36 @@ let lang = localStorage.getItem("lang") || "nl";
 let scenario = localStorage.getItem("scenario") || "riddles_jurassic.json";
 let endScreenData = {};
 
+function typeText(element, text, speed = 20, callback) {
+  element.innerHTML = "";
+  let i = 0;
+  function typeChar() {
+    if (i < text.length) {
+      const char = text.charAt(i);
+      element.innerHTML += (char === "\\n") ? "<br>" : char;
+      i++;
+      setTimeout(typeChar, speed);
+    } else if (callback) {
+      callback();
+    }
+  }
+  typeChar();
+}
+
 function showQuestion() {
+
+
   const q = questions[idx];
-  document.getElementById("intro").innerHTML = q.intro?.[lang] || "";
-  document.getElementById("desc").innerHTML = q.desc?.[lang] || "";
+  const block = document.getElementById("question-block");
+block.classList.remove("visible"); // reset
+block.classList.add("fade-in-delay"); // ensure it fades
+
+setTimeout(() => {
+  block.classList.add("visible");
+}, 1500); // fade-in delay
+
+  document.getElementById("intro").innerHTML = (q.intro?.[lang] || "").replace(/\n/g, "<br>");
+  document.getElementById("desc").innerHTML = (q.desc?.[lang] || "").replace(/\n/g, "<br>");
   document.getElementById("question").innerHTML = q.question?.[lang] || "";
   document.getElementById("hint").innerText = "";
   document.getElementById("answer").value = "";
@@ -94,7 +120,7 @@ function checkAnswer() {
     if (idx >= questions.length) {
       endScreen(true);
     } else {
-      showQuestion();
+      showIntroThenQuestion();
     }
   } else {
     // ❌ Fout antwoord: melding
@@ -118,54 +144,70 @@ function checkAnswer() {
 
 
 function handleButtonAction(btn) {
-  const action = btn.action;
-  if (action === "overlay") {
+  const overlay = document.getElementById("overlay");
+  const overlayContent = document.getElementById("overlay-content");
+
+  if (btn.action === "overlay") {
     if (btn.content.endsWith(".html")) {
-  fetch(btn.content)
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById("overlay-content").innerHTML = html;
-      document.getElementById("overlay").classList.remove("hidden");
-    })
-    .catch(err => {
-      document.getElementById("overlay-content").innerHTML = "⚠️ Kan overlay niet laden.";
-      document.getElementById("overlay").classList.remove("hidden");
-    });
-} else {
-  // Slimme overlay-loader op basis van content-type
-const overlayEl = document.getElementById("overlay-content");
-document.getElementById("overlay").classList.remove("hidden");
+      fetch(btn.content)
+        .then(res => res.text())
+        .then(html => {
+          overlayContent.innerHTML = html;
+          overlay.classList.remove("hidden");
 
-if (btn.content.endsWith(".html")) {
-  fetch(btn.content)
-    .then(res => res.text())
-    .then(html => overlayEl.innerHTML = html)
-    .catch(() => overlayEl.innerHTML = "⚠️ Kan HTML-overlay niet laden.");
-} else if (btn.content.endsWith(".jpg") || btn.content.endsWith(".jpeg") || btn.content.endsWith(".png") || btn.content.endsWith(".gif")) {
-  overlayEl.innerHTML = `<img src="${btn.content}" class="w-full rounded shadow-lg max-h-[60vh] mx-auto" />`;
-} else if (btn.content.endsWith(".mp4")) {
-  overlayEl.innerHTML = `<video src="${btn.content}" controls autoplay class="w-full rounded shadow-lg max-h-[60vh] mx-auto"></video>`;
-} else {
-  overlayEl.innerHTML = btn.content;
-}
+          // ✅ Fix accordion buttons with animated toggle
+          overlayContent.querySelectorAll("[onclick*='toggleAccordion']").forEach(button => {
+            const match = button.getAttribute("onclick").match(/'([^']+)'/);
+            if (!match) return;
+            const targetId = match[1];
+            const contentEl = document.getElementById(targetId);
 
-  document.getElementById("overlay").classList.remove("hidden");
-}
-    document.getElementById("overlay").classList.remove("hidden");
-  } else if (action === "hint") {
-    alert(btn.content);
-  } else if (action === "answer") {
-    document.getElementById("answer").value = btn.content;
-  } else if (action === "goto") {
-    const goToIndex = parseInt(btn.content);
-    if (!isNaN(goToIndex) && goToIndex >= 0 && goToIndex < questions.length) {
-      idx = goToIndex;
-      showQuestion();
+            button.removeAttribute("onclick"); // prevent default
+            button.addEventListener("click", () => {
+              if (!contentEl) return;
+              const expanded = !contentEl.classList.contains("hidden");
+              contentEl.style.maxHeight = expanded ? "0px" : contentEl.scrollHeight + "px";
+              contentEl.classList.toggle("hidden");
+
+              // animate height
+              contentEl.style.transition = "max-height 0.4s ease";
+            });
+          });
+        })
+        .catch(() => {
+          overlayContent.innerHTML = "<p class='text-red-400'>⚠️ Kon overlay niet laden.</p>";
+          overlay.classList.remove("hidden");
+        });
+    } else if (btn.content.match(/\.(jpg|png|jpeg|gif)$/)) {
+      overlayContent.innerHTML = `<img src="${btn.content}" class="w-full rounded shadow" />`;
+      overlay.classList.remove("hidden");
+    } else if (btn.content.endsWith(".mp4")) {
+      overlayContent.innerHTML = `<video src="${btn.content}" controls autoplay class="w-full rounded"></video>`;
+      overlay.classList.remove("hidden");
+    } else {
+      overlayContent.innerHTML = btn.content;
+      overlay.classList.remove("hidden");
     }
-  } else {
-    console.warn("Onbekende actie:", action);
+  }
+
+  else if (btn.action === "hint") {
+    const q = questions[idx];
+    document.getElementById("hint").innerText = q.hint?.[lang] || "";
+  }
+
+  else if (btn.action === "answer") {
+    document.getElementById("answer").value = btn.content;
+  }
+
+  else if (btn.action === "goto") {
+    const target = parseInt(btn.content);
+    if (!isNaN(target) && target >= 0 && target < questions.length) {
+      idx = target;
+      showIntroThenQuestion();
+    }
   }
 }
+
 
 function closeOverlay() {
   document.getElementById("overlay").classList.add("hidden");
@@ -195,5 +237,43 @@ fetch(scenario)
       endScreenData = data.endScreen || {};
     }
     idx = 0;
-    showQuestion();
+    showIntroThenQuestion();
   });
+
+function showIntroThenQuestion() {
+  const q = questions[idx];
+  const introText = q.intro?.[lang] || "";
+
+  if (!introText.trim()) {
+    showQuestion();
+    return;
+  }
+
+  // achtergrond instellen
+  if (q.background) {
+    document.body.style.backgroundImage = `url('${q.background}')`;
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundPosition = "center center";
+  }
+
+  const introPage = document.getElementById("intro-page");
+  const introContent = document.getElementById("intro-content");
+
+  introPage.classList.remove("hidden", "visible");
+  setTimeout(() => introPage.classList.add("visible"), 100);
+
+  typeText(introContent, introText, 20); // typemachine zonder vertraging op knop
+  document.querySelector(".bg-black.bg-opacity-80").classList.add("hidden");
+}
+
+function startRealQuestion() {
+  document.getElementById("intro-page").classList.add("hidden");
+  document.querySelector(".bg-black.bg-opacity-80").classList.remove("hidden");
+  showQuestion();
+}
+
+function startFirstQuestion() {
+  document.getElementById("answer-section").classList.remove("hidden");
+  showQuestion(); // toont dan idx 0 zoals normaal
+}

@@ -3,103 +3,84 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dino-Encyclopedie</title>
+  <title>Dino-Encyclopedie - Accordion</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --bg: #1a2e1a;
+      --accent: #ccaa44;
+      --panel: #263626;
+      --hover: #3a4a3a;
+    }
+
+    .accordion-content {
+      overflow: hidden;
+      max-height: 0px;
+      transition: max-height 0.4s ease;
+      background-color: var(--panel);
+      padding: 0.75rem 1rem;
+      margin-top: 0.25rem;
+      border-left: 4px solid var(--accent);
+      border-radius: 0 0 0.5rem 0.5rem;
+      color: #f1f1f1;
+      line-height: 1.5;
+      box-sizing: border-box;
+    }
+
+    .accordion-btn {
+      background-color: #2e3b2f;
+      color: var(--accent);
+      padding: 0.75rem 1rem;
+      border-radius: 0.5rem;
+      text-align: left;
+      font-weight: bold;
+      width: 100%;
+      margin-top: 0.5rem;
+      box-sizing: border-box;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .accordion-btn:hover {
+      background-color: var(--hover);
+    }
+  </style>
 </head>
-<body class="bg-green-900 text-white font-sans p-6 space-y-12">
+<body class="bg-[var(--bg)] text-white font-sans p-6">
+  <h1 class="text-3xl font-bold text-[var(--accent)] mb-6">🦕 Dino-Encyclopedie</h1>
 
-  <h1 class="text-4xl font-bold text-yellow-400 text-center">🦕 Dino-Encyclopedie</h1>
+  <section class="space-y-2">
+    <button class="accordion-btn" onclick="toggleAccordion('dino1')">Tyrannosaurus Rex</button>
+    <div id="dino1" class="accordion-content">
+      Een van de grootste vleesetende dino's ooit. Had enorme kaken. Leefde in het Krijt tijdperk.
+    </div>
 
-  <!-- stijl: plain -->
-  <section>
-    <h2 class="text-2xl font-bold text-yellow-300 mb-4">Stijl 1: Plain</h2>
-    <div class="mb-4">
-      <h3 class="text-xl font-bold">Tyrannosaurus Rex</h3>
-      <p>Een van de grootste vleesetende dino's ooit. Had enorme kaken. Leefde in het Krijt tijdperk.</p>
+    <button class="accordion-btn" onclick="toggleAccordion('dino2')">Triceratops</button>
+    <div id="dino2" class="accordion-content">
+      Drie hoorns op zijn kop. Een grote kraag beschermde zijn nek. Een planteneter uit het Laat-Krijt.
     </div>
-    <div>
-      <h3 class="text-xl font-bold">Triceratops</h3>
-      <p>Drie hoorns op zijn kop. Een grote kraag beschermde zijn nek. Een planteneter uit het Laat-Krijt.</p>
-    </div>
-  </section>
 
-  <!-- stijl: accordion -->
-  <section>
-    <h2 class="text-2xl font-bold text-yellow-300 mb-4">Stijl 2: Accordion</h2>
-    <div>
-      <button onclick="toggleAccordion('acc1')" class="w-full text-left p-3 bg-green-800 rounded">Velociraptor</button>
-      <div id="acc1" class="hidden p-3 bg-green-700 mt-1 rounded">
-        Klein, snel en intelligent. Had veren. Bekend van Jurassic Park.
-      </div>
-      <button onclick="toggleAccordion('acc2')" class="w-full text-left p-3 bg-green-800 rounded mt-2">Brachiosaurus</button>
-      <div id="acc2" class="hidden p-3 bg-green-700 mt-1 rounded">
-        Lange nek, at bladeren uit hoge bomen. Woog tot 56 ton.
-      </div>
+    <button class="accordion-btn" onclick="toggleAccordion('dino3')">Velociraptor</button>
+    <div id="dino3" class="accordion-content">
+      Klein, snel en intelligent. Had veren. Bekend van Jurassic Park.
     </div>
-  </section>
 
-  <!-- stijl: gridcard -->
-  <section>
-    <h2 class="text-2xl font-bold text-yellow-300 mb-4">Stijl 3: Gridcards</h2>
-    <div class="grid sm:grid-cols-2 gap-4">
-      <div class="bg-green-800 p-4 rounded shadow">
-        <h3 class="text-xl font-bold text-yellow-300">Stegosaurus</h3>
-        <p>Stekels op de rug en een hersenvolume zo groot als een walnoot.</p>
-      </div>
-      <div class="bg-green-800 p-4 rounded shadow">
-        <h3 class="text-xl font-bold text-yellow-300">Ankylosaurus</h3>
-        <p>Zwaar bepantserd met knotsvormige staart. Een levende tank.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- stijl: tabbed -->
-  <section>
-    <h2 class="text-2xl font-bold text-yellow-300 mb-4">Stijl 4: Tabbed</h2>
-    <div class="mb-2 space-x-2">
-      <button onclick="showTab('tab1')" class="px-4 py-2 bg-yellow-500 text-black rounded">Spinosaurus</button>
-      <button onclick="showTab('tab2')" class="px-4 py-2 bg-yellow-500 text-black rounded">Allosaurus</button>
-    </div>
-    <div id="tab1" class="tab hidden bg-green-800 p-4 rounded">
-      Groot roofdier met zeilachtige rug. Leefde in moerasgebieden.
-    </div>
-    <div id="tab2" class="tab hidden bg-green-800 p-4 rounded">
-      Slechts iets kleiner dan T-Rex. Bekend uit het Jura tijdperk.
-    </div>
-  </section>
-
-  <!-- stijl: listgroup -->
-  <section>
-    <h2 class="text-2xl font-bold text-yellow-300 mb-4">Stijl 5: List Group</h2>
-    <ul class="space-y-2">
-      <li class="bg-green-800 p-3 rounded">Iguanodon – Had een duimstekel, kon op twee benen lopen.</li>
-      <li class="bg-green-800 p-3 rounded">Carnotaurus – Hoorns boven zijn ogen. Zeer snelle vleeseter.</li>
-    </ul>
-  </section>
-
-  <!-- stijl: tiles -->
-  <section>
-    <h2 class="text-2xl font-bold text-yellow-300 mb-4">Stijl 6: Tiles</h2>
-    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-      <div class="bg-green-700 h-32 flex flex-col items-center justify-center rounded shadow text-center">
-        <h3 class="text-lg font-bold text-yellow-300">Dilophosaurus</h3>
-        <p>Kleine jager met kammen op zijn kop.</p>
-      </div>
-      <div class="bg-green-700 h-32 flex flex-col items-center justify-center rounded shadow text-center">
-        <h3 class="text-lg font-bold text-yellow-300">Pachycephalosaurus</h3>
-        <p>Dikke schedel voor kopstoten.</p>
-      </div>
+    <button class="accordion-btn" onclick="toggleAccordion('dino4')">Brachiosaurus</button>
+    <div id="dino4" class="accordion-content">
+      Lange nek, at bladeren uit hoge bomen. Woog tot 56 ton.
     </div>
   </section>
 
   <script>
     function toggleAccordion(id) {
-      document.querySelectorAll('[id^="acc"]').forEach(el => el.classList.add('hidden'));
-      document.getElementById(id).classList.toggle('hidden');
-    }
-    function showTab(id) {
-      document.querySelectorAll('.tab').forEach(el => el.classList.add('hidden'));
-      document.getElementById(id).classList.remove('hidden');
+      document.querySelectorAll('.accordion-content').forEach(el => {
+        if (el.id === id) {
+          const expanded = el.style.maxHeight && el.style.maxHeight !== "0px";
+          el.style.maxHeight = expanded ? "0px" : el.scrollHeight + "px";
+        } else {
+          el.style.maxHeight = "0px";
+        }
+      });
     }
   </script>
 </body>

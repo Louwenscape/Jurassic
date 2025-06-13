@@ -1,0 +1,92 @@
+Om een noodsluis te openen, moeten Jill en Casey beiden hun unieke personeelscode invoeren. 
+Jill weet de hare, maar de spelers moeten die van Casey ontcijferen met behulp van een document vol onderzoekslijnen.
+
+| #  | Naam          | Initialen | Projectnaam    | Cluster | Subproject  | Aantal Embryo’s | Startdatum | Veiligheidsniveau | DNA-type | Supervisie    | Codenaam | Biogroep | Status   | Incidentlog    | Aantekening         | Locatie Laatst | Evacuatieoptie | Projecttype | Toegangsbadge |
+| -- | ------------- | --------- | -------------- | ------- | ----------- | --------------- | ---------- | ----------------- | -------- | ------------- | -------- | -------- | -------- | -------------- | ------------------- | -------------- | -------------- | ----------- | ------------- |
+| 01 | Jill Annadera | JA        | FeatherBloom   | P       | Bloom South | 05               | 12/05      | 3                 | Raptor   | Dr. Kovacs    | JA-P05   | P05       | ✅ Actief | Geen           | Verplaatst          | Niv -2, B104   | Ja             | Incubatie   | A-0213        |
+| 02 | Casey Martens | CM        | FossilEdge     | F       | Edge Root   | 03               | 14/04      | 2                 | Cerato   | Dr. Hoven     | ???      | F01       | ✅ Actief | Geen           | —                   | Niv -2, D207   | Onbekend       | Incubatie   | C-1027        |
+| 03 | Hye-Jin Kwon  | HK        | Aquaraptor     | A       | Hydro Track | 02               | 01/02      | 4                 | Raptor   | Prof. N’Gai   | HK-A02   | A02       | ✅ Actief | Minor leak     | Veilig              | Niv -3, T403   | Ja             | Waterlijn   | B-3191        |
+| 04 | Tariq Noor    | TN        | FangTrace      | F       | Trace N-1   | 03               | 07/03      | 5                 | Dilo     | Dr. Hoven     | TN-F03   | F12       | ✅ Actief | 1 waarschuwing | Vermeden            | Niv -2, D204   | Ja             | Jachtlijn   | C-1003        |
+| 05 | Leo Cheng     | LC        | Serrated Bloom | P       | Serrate Lab | 07               | 03/03      | 3                 | Raptor   | Dr. Kovacs    | LC-P03   | R03       | ✅ Actief | Dubbele scan   | Op scherp           | Niv -2, B110   | Ja             | Incubatie   | A-0417        |
+| 06 | Elias du Mont | EM        | CradleDepth    | C       | Delta Core  | 05               | 21/02      | 4                 | Stego    | Prof. Solinas | EM-C02   | H01       | ✅ Actief | Geen           | Vergrendeld         | Niv -3, C121   | Ja             | Herbivoor   | D-2501        |
+| 07 | Mikayla Hall  | MH        | FeatherBloom   | P       | Bloom North | 01               | 17/04      | 2                 | Raptor   | Jill Annadera | MH-P04   | R21       | ✅ Actief | Geen           | Vrijgegeven         | Niv -2, B105   | Nee            | Assistentie | A-0225        |
+| 08 | Claire Dumont | CD        | SerpentWing    | S       | Wing Coil   | 05               | 22/03      | 3                 | Ptero    | Dr. Hoven     | CD-S03   | S03       | ✅ Actief | Geen           | Mogelijk verplaatst | Niv -3, S301   | Onbekend       | Luchtlijn   | E-0981        |
+
+
+Jill heeft JA-P05
+Casey heeft CM-F04
+Initialen- cluster- startmaand
+
+
+*Raadsel:*  
+"In een kudde van 12 Triceratops zijn een kwart hiervan jong. Elke volwassen Triceratops weegt 8 ton en een jong de helft. Hoeveel ton wegen alle Triceratops samen?"  
+*Antwoord:* 72 (ton)  
+*Uitleg:*  
+- Aantal volwassenen = 12 - 3 = 9 * 8 Ton
+3*4= 12  
+- Totaal gewicht = 9 × 8 + 3*4 = 72 + 12 = 84 ton
+
+
+
+*Raadsel*
+Rex = 47 
+Raptor = ?
+
+*Raadsel:*  
+"Het Krijt-tijdperk eindigde 66 miljoen jaar geleden. Het begon 145 miljoen jaar geleden. Hoeveel miljoen jaar duurde het Krijt-tijdperk?"  
+*Antwoord:* 79  
+*Uitleg:*  
+- Duur = Start - Einde = 145 - 66 = 79 miljoen jaar.
+
+
+"Een Pterodactylus-kolonie groeit exponentieel. Op dag 1 zijn er 5. Elke dag verdubbelt het aantal, maar op dag 4 eten roofdieren 17 exemplaren. Hoeveel overleven er op dag 5?"  
+*Antwoord:* 46 
+*Uitleg:*  
+- Dag 1: 5  
+- Dag 2: 5 × 2 = 10  
+- Dag 3: 10 × 2 = 20  
+- Dag 4: 20 × 2 = 40 → 40 - 17 = 23 over  
+- Dag 5: 23 × 2 = 46
+
+
+hele moeilijke:
+"Een fossiel bevat nog 6,25% C14. De halfwaardetijd is 5.730 jaar. Hoeveel jaar oud is het? Rond af op duizendtallen."  
+*Antwoord:* 22900  
+*Uitleg:*  
+- 6,25% = 1/16 → (1/2)^4 → 4 halfwaardetijden  
+- 4 × 5.730 = 22.920 jaar  
+- Afronden op duizendtallen: *22.900*
+Want iedere keer door de helft is 5730 jaar
+
+
+### 6. *Dino-Botten-Metriek*  
+*Raadsel:*  
+"Een bot is 1,8 m lang. In het lab wordt het verkleind tot 1:10 schaal. Daarna wordt het 3 keer vergroot. Wat is de eindlengte in cm?"  
+*Antwoord:* 54  
+*Uitleg:*  
+- Origineel: 1,8 m = *180 cm*  
+- Verkleind tot 1:10 → 180 / 10 = *18 cm*  
+- 3 keer vergroot: 18 × 3 = *54 cm*
+
+
+"Het Krijt begon 145 miljoen jaar geleden en eindigde 66 miljoen jaar geleden. Het Jura duurde 54 miljoen jaar. Hoeveel langer was het Krijt dan het Jura? Geef antwoord in miljoenen jaren."  
+*Antwoord:* 25  
+*Uitleg:*  
+- Krijt duur: 145 - 66 = *79 miljoen jaar*  
+- Jura duur: *54 miljoen jaar*  
+- Verschil: 79 - 54 = *25 miljoen jaar*
+
+
+
+*Raadsel:*  
+"Een Brachiosaurus eet dagelijks 60 kg planten. Een Stegosaurus eet 1/3 daarvan. Samen eten ze in 5 dagen evenveel als een kudde van 20 Compsognathus in 3 dagen. Hoeveel eet één Compsognathus per dag in kg? Rond af naar hele getallen"  
+*Antwoord:* 2  
+*Uitleg:*  
+- Brachiosaurus/dag: *60 kg*  
+- Stegosaurus/dag: 60 × (1/3) = *20 kg*  
+- Samen/dag: 60 + 20 = *80 kg*  
+- Samen/5 dagen: 80 × 5 = *400 kg*  
+- Dit = kudde van 20 Compsognathus/3 dagen  
+- Dus 20 Compsognathus/3 dagen = 400 kg  
+- Per Compsognathus/3 dagen: 400 / 20 = *20 kg*  
+- Per dag: 20 / 3 ≈ 6,67
