@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dino-Encyclopedie - Accordion</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --bg: #1a2e1a;
+      --accent: #ccaa44;
+      --panel: #263626;
+      --hover: #3a4a3a;
+    }
+
+.accordion-content {
+  overflow: hidden;
+  max-height: 0px;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  background-color: var(--panel);
+  padding: 0 1rem; /* collapsed state: only horizontal padding */
+  margin-top: 0.25rem;
+  border-left: 4px solid var(--accent);
+  border-radius: 0 0 0.5rem 0.5rem;
+  color: #f1f1f1;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+
+    .accordion-btn {
+      background-color: #2e3b2f;
+      color: var(--accent);
+      padding: 0.75rem 1rem;
+      border-radius: 0.5rem;
+      text-align: left;
+      font-weight: bold;
+      width: 100%;
+      margin-top: 0.5rem;
+      box-sizing: border-box;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .accordion-btn:hover {
+      background-color: var(--hover);
+    }
+  </style>
+</head>
+<body class="bg-[var(--bg)] text-white font-sans p-6">
+  <h1 class="text-3xl font-bold text-[var(--accent)] mb-6">🦕 Dino-Encyclopedie</h1>
+
+  <section class="space-y-2">
+    <button class="accordion-btn" onclick="toggleAccordion('dino1')">Tyrannosaurus Rex</button>
+    <div id="dino1" class="accordion-content">
+      Een van de grootste vleesetende dino's ooit. Had enorme kaken. Leefde in het Krijt tijdperk.
+    </div>
+
+    <button class="accordion-btn" onclick="toggleAccordion('dino2')">Triceratops</button>
+    <div id="dino2" class="accordion-content">
+      Drie hoorns op zijn kop. Een grote kraag beschermde zijn nek. Een planteneter uit het Laat-Krijt.
+    </div>
+
+    <button class="accordion-btn" onclick="toggleAccordion('dino3')">Velociraptor</button>
+    <div id="dino3" class="accordion-content">
+      Klein, snel en intelligent. Had veren. Bekend van Jurassic Park.
+    </div>
+
+    <button class="accordion-btn" onclick="toggleAccordion('dino4')">Brachiosaurus</button>
+    <div id="dino4" class="accordion-content">
+      Lange nek, at bladeren uit hoge bomen. Woog tot 56 ton.
+    </div>
+  </section>
+
+<script>
+  function toggleAccordion(id) {
+    document.querySelectorAll('.accordion-content').forEach(el => {
+      if (el.id === id) {
+        const expanded = el.style.maxHeight && el.style.maxHeight !== "0px";
+        el.style.maxHeight = expanded ? "0px" : el.scrollHeight + "px";
+        el.style.paddingTop = expanded ? "0" : "0.75rem";
+        el.style.paddingBottom = expanded ? "0" : "0.75rem";
+      } else {
+        el.style.maxHeight = "0px";
+        el.style.paddingTop = "0";
+        el.style.paddingBottom = "0";
+      }
+    });
+  }
+</script>
+</body>
+</html>

@@ -6,21 +6,56 @@ let lang = localStorage.getItem("lang") || "nl";
 let scenario = localStorage.getItem("scenario") || "riddles_jurassic.json";
 let endScreenData = {};
 
+function setLanguage(value) {
+  localStorage.setItem("lang", value);
+  lang = value;
+}
+
+
+
+let typewriterTimeouts = [];
+
+function clearTypewriter() {
+  typewriterTimeouts.forEach(t => clearTimeout(t));
+  typewriterTimeouts = [];
+}
+
 function typeText(element, text, speed = 20, callback) {
+  clearTypewriter(); // Cancel any previous typing
+
+  if (typeof text !== "string") text = String(text);
+  const lines = text.split("\n");
+
   element.innerHTML = "";
-  let i = 0;
-  function typeChar() {
-    if (i < text.length) {
-      const char = text.charAt(i);
-      element.innerHTML += (char === "\\n") ? "<br>" : char;
-      i++;
-      setTimeout(typeChar, speed);
-    } else if (callback) {
-      callback();
+  let currentLine = 0;
+  let currentChar = 0;
+
+  function typeLine() {
+    if (currentLine >= lines.length) {
+      if (callback) callback();
+      return;
+    }
+
+    if (currentChar < lines[currentLine].length) {
+      element.innerHTML += lines[currentLine].charAt(currentChar);
+      currentChar++;
+      const timeout = setTimeout(typeLine, speed);
+      typewriterTimeouts.push(timeout);
+    } else {
+      element.innerHTML += "<br>";
+      currentLine++;
+      currentChar = 0;
+      const timeout = setTimeout(typeLine, speed);
+      typewriterTimeouts.push(timeout);
     }
   }
-  typeChar();
+
+  typeLine();
 }
+
+
+
+
 
 function showQuestion() {
 
@@ -34,7 +69,6 @@ setTimeout(() => {
   block.classList.add("visible");
 }, 1500); // fade-in delay
 
-  document.getElementById("intro").innerHTML = (q.intro?.[lang] || "").replace(/\n/g, "<br>");
   document.getElementById("desc").innerHTML = (q.desc?.[lang] || "").replace(/\n/g, "<br>");
   document.getElementById("question").innerHTML = q.question?.[lang] || "";
   document.getElementById("hint").innerText = "";
@@ -242,7 +276,15 @@ fetch(scenario)
 
 function showIntroThenQuestion() {
   const q = questions[idx];
-  const introText = q.intro?.[lang] || "";
+  console.log("Intro raw object:", q.intro);
+console.log("Intro resolved string:", q.intro?.[lang]);
+const introText = q.intro?.[lang] || "";
+
+
+  console.log("Introtekst geladen:", introText);
+
+
+  document.getElementById("game-container").classList.add("hidden");
 
   if (!introText.trim()) {
     showQuestion();
@@ -262,16 +304,19 @@ function showIntroThenQuestion() {
 
   introPage.classList.remove("hidden", "visible");
   setTimeout(() => introPage.classList.add("visible"), 100);
+introContent.innerHTML = "";
 
-  typeText(introContent, introText, 20); // typemachine zonder vertraging op knop
+ typeText(introContent, introText, 20); // typemachine zonder vertraging op knop
+ 
   document.querySelector(".bg-black.bg-opacity-80").classList.add("hidden");
 }
 
 function startRealQuestion() {
   document.getElementById("intro-page").classList.add("hidden");
-  document.querySelector(".bg-black.bg-opacity-80").classList.remove("hidden");
+  document.getElementById("game-container").classList.remove("hidden");
   showQuestion();
 }
+
 
 function startFirstQuestion() {
   document.getElementById("answer-section").classList.remove("hidden");
