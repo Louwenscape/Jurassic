@@ -158,8 +158,20 @@ function checkAnswer() {
     }
   } else {
     // ❌ Fout antwoord: melding
-    const msg = lang === "nl" ? "Dat is niet correct. Er gaat 1 minuut van de tijd af." : "That is incorrect. 1 minute deducted.";
-    alert(msg);
+    const msg = lang === "nl"
+  ? "❌ Fout antwoord! Je verliest 1 minuut."
+  : "❌ Wrong answer! 1 minute deducted.";
+
+const errorBox = document.getElementById("error-message");
+if (errorBox) {
+  errorBox.innerText = msg;
+  errorBox.classList.remove("hidden");
+
+  // Verberg na 3 seconden
+  setTimeout(() => {
+    errorBox.classList.add("hidden");
+  }, 3000);
+}
 
     // ⏱️ Trek tijd af (indien actief)
     if (q.time && time > 60) {
