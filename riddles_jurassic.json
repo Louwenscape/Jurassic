@@ -58,7 +58,7 @@
       },
       "hint": {},
       "desc": {
-        "nl": "De notitie in het dashboardkastje leest:\nIn een kudde van 12 Triceratops zijn een kwart hiervan jong. Elke volwassen Triceratops weegt 8 ton en een jong de helft. De startcode is het totale gewicht"
+        "nl": "De notitie in het dashboardkastje leest:\nIn een kudde van 12 Triceratops zijn een kwart hiervan jong. Een jong weegt de helft van een volwassene. De startcode is het totale gewicht"
       },
       "answer": [
         "84"
@@ -68,9 +68,9 @@
       "buttons": {
         "nl": [
           {
-            "label": "",
-            "action": "",
-            "content": ""
+            "label": "encyclopedie ",
+            "action": "overlay",
+            "content": "assets/boekje.html"
           }
         ],
         "en": []
@@ -101,30 +101,28 @@
     },
     {
       "question": {
-        "nl": "Wat is Casey's code"
+        "nl": "Wat is de code?"
       },
       "intro": {
-        "nl": "De stalen deur piepte open met een scherpe metalen zucht.\n\nWat hij aantrof, was geen lab meer.\nTafels lagen overhoop, beeldschermen waren verbrijzeld, glasscherven lagen als sneeuw over de vloer. Koelkasten stonden open, hun inhoud verspreid. Scherpe klauwsporen trokken zich door muren en vloertegels. Alles wees erop dat er paniek was geweest — en roofdieren.\n\nCasey bewoog zich stil door de gangen. Elk geluid leek tien keer luider. Toen hoorde hij iets: zacht geschuifel, een metalen tik. Geen dierengeluid. Menselijk.\n\nHij volgde het geluid tot bij Labruimte C-2. Daar, achter een omgevallen serverkast, bewoog iets.\n\n“Wegblijven!” klonk het hijgend.\n\nHij stapte naar voren.\n\n“Jill?”\n\nZe keek op. Haar ogen werden groot toen ze hem herkende.\n\n“Casey? Jij bent er nog? Ik dacht dat je allang geëvacueerd was.”\n\n“Ik was te laat,” zei hij. “Jeep kapot. Lift beveiligd. Ik moest lopen.”\n\nJill slikte.\n\n“Ik hád de evac gehaald… maar vlak voor ik bij de helipads was, brak een groep raptors via de oostvleugel binnen. Ze kwamen overal tegelijk. Ik rende naar de koelzone en heb me verstopt.”\n\n“We zijn niet veilig hier,” zei Casey. “We moeten een nieuwe uitweg vinden.”\n\nJill knikte langzaam.\n\n“Er zou nog één shuttle op het zuidplateau kunnen staan. Maar we komen er alleen als we… stil blijven.”\n\nIets krabde langs de buitenwand. Langzaam. Zoeken. Ruiken.\n\nZe keken elkaar aan.\n\nSamen haastten ze zich naar de personeelsuitgang, een oude zijroute voor noodgevallen. Achter een corridor, langs een ingestorte gang, bereikten ze de draaideur – zwaar staal, één exit.\n\nCasey greep de hendel. Niets.\n\nEen klein paneel lichtte rood op:"
+        "nl": "De stalen deur piepte open met een scherpe metalen zucht.\n\nWat hij aantrof, was geen lab meer.\nTafels lagen overhoop, beeldschermen waren verbrijzeld, glasscherven lagen als sneeuw over de vloer. Koelkasten stonden open, hun inhoud verspreid. Scherpe klauwsporen trokken zich door muren en vloertegels. Alles wees erop dat er paniek was geweest — en roofdieren.\n\nCasey bewoog zich stil door de gangen. Elk geluid leek tien keer luider. Toen hoorde hij iets: zacht geschuifel, een metalen tik. Geen dierengeluid. Menselijk.\n\nHij volgde het geluid tot bij Labruimte C-2. Daar, achter een omgevallen serverkast, bewoog iets.\n\n“Wegblijven!” klonk het hijgend.\n\nHij stapte naar voren.\n\n“Jill?”\n\nZe keek op. Haar ogen werden groot toen ze hem herkende.\n\n“Casey? Jij bent er nog? Ik dacht dat je allang geëvacueerd was.”\n\n“Ik was te laat,” zei hij. “Jeep kapot. Lift beveiligd. Ik moest lopen.”\n\nJill slikte.\n\n“Ik hád de evac gehaald… maar vlak voor ik bij de helipads was, brak een groep raptors via de oostvleugel binnen. Ze kwamen overal tegelijk. Ik rende naar de koelzone en heb me verstopt.”\n\n“We zijn niet veilig hier,” zei Casey. “We moeten een nieuwe uitweg vinden.”\n\nJill knikte langzaam.\n\n“Er zou nog één helikopter op het zuidplateau kunnen staan. Maar we komen er alleen als we… stil blijven.”\n\nIets krabde langs de buitenwand. Langzaam. Zoeken. Ruiken.\n\nZe keken elkaar aan.\n\nSamen haastten ze zich naar de personeelsuitgang, een oude zijroute voor noodgevallen. Achter een corridor, langs een ingestorte gang, bereikten ze de draaideur – zwaar staal, één exit.\n\nCasey greep de hendel. Niets.\n\nEen klein paneel lichtte rood op:"
       },
       "hint": {
-        "nl": "Kijk goed naar de andere professoren en hun code naam"
+        "nl": "A=1"
       },
       "desc": {
-        "nl": "Jill haar code is JA-P05."
+        "nl": "REX = 47. \nRaptor = ?"
       },
       "answer": [
-        "CM-F04",
-        "cm-f04",
-        "Cm-f04"
+        "88"
       ],
       "background": "assets/bg4.jpg",
       "image": "",
       "buttons": {
         "nl": [
           {
-            "label": "Personeelsbestand",
-            "action": "Overlay",
-            "content": "assets/Personeelstabel.html"
+            "label": "",
+            "action": "",
+            "content": ""
           }
         ],
         "en": []
@@ -132,19 +130,211 @@
       "time": "300"
     },
     {
-      "question": {},
+      "question": {
+        "nl": "Wat is de eindlengte in mm?"
+      },
       "intro": {
-        "nl": "Een rauwe, diepe brul.\nNiet ver weg.\n\nCasey verstijfde. Jill's ogen schoten naar de gang. “Dat was… achter de hoofdlift.”\n\nTrillende metalen. Een veraf tikkend geluid. Klauwen op beton?\n\nZe renden.\n\nLangs omgevallen stoelen, door half openstaande deuren, de gang in. Aan het eind zag Casey de rode lichten van de nooduitgangssluis. Een zware schuifdeur, net nog open — erboven stond:\n“Evacuatiezone – Dock B”\n\nHij duwde op het paneel. Niets.\nEen touchscreen flikkerde aan:\n\n\"Beveiliging geactiveerd – dubbele verificatie vereist\"\n“Beide gebruikers moeten hun code invoeren, gebaseerd op hun onderzoeksindex.”\n\nJill vloekte. “Dat verdomde systeem. Ze gebruiken onze persoonlijke codenaamvolgorde. Ik weet de mijne nog.”\n\n"
+        "nl": "Casey Martens en Jill Annadera stonden in een smalle betonnen gang, verlicht door knipperende noodbalken. De lucht rook naar verbrand plastic en natte aarde.\n\nZe zetten het op een lopen, richting het evacuatieplatform.\n\n“Het is niet ver meer,” hijgde Jill. “Twee gangen, dan de buitendeur.”\n\nCasey knikte en hield zijn datapad in de aanslag, klaar om systemen te forceren als dat nodig was.\n\nMaar midden in de gang stopten ze plots.\n\nGlas lag verspreid over de vloer. Er waren bloedsporen. Krassen langs de muur. Eén van de lampen bungelde aan een kabel, flikkerend boven een omvergeworpen kar.\n\nJill bleef stokstijf staan.\n\n“Dit is vers.”\n\nZe draaide zich langzaam om.\n\nEn daar stonden ze.\n\nTwee Velociraptors bij het einde van de gang. Stil. Kijkend. Hun ogen geel en doodstil. Eén kantelde zijn kop lichtjes, de ander zette één klauw vooruit, langzaam, als een kat op jacht.\n\n“Casey…”\n\nMartens draaide zich al om en sprintte naar het vergrendelingspaneel van de noodsluis."
       },
       "hint": {},
-      "desc": {},
-      "answer": [],
-      "background": "",
+      "desc": {
+        "nl": "Een bot is 1,8 m lang. In het lab wordt het verkleind tot 1:10 schaal. Daarna wordt het 3 keer vergroot. "
+      },
+      "answer": [
+        "540"
+      ],
+      "background": "assets/bg6/jpg",
+      "image": "",
+      "buttons": {
+        "nl": [],
+        "en": []
+      },
+      "time": "300"
+    },
+    {
+      "question": {
+        "nl": "Wat is de code van Casey?"
+      },
+      "intro": {
+        "nl": "De stalen nooddeur viel met een dreun achter hen in het slot. De klauwen, het gekrijs – allemaal opgesloten. Voor nu.\n\nCasey Martens en Jill Annadera renden door de laatste gang, hun stappen echoënd op het gladde beton. De omgeving veranderde: minder puin, meer intacte verlichting. Ze naderden de hoofdstructuur van het evacuatielab.\n\nAan het einde van de gang: een zware metalen deur.\nDaarachter lag de trap naar het heliplatform.\n\nJill greep de hendel.\n\nBIEP. ROOD LICHT.\n\"Toegang beperkt. Persoonlijke autorisatie vereist.\"\n\nZe keek naar Casey.\n\n“Alleen personeel van hoogste clearance. Ik weet mijn code, maar weet jij de jouwe?”\n\n“Wat?”\n\nAchter hen, verderop in de gang, klonk het eerste brekende glas. Hard.\n\nEen seconde later nóg één. Dan geschuifel. Met klauwen.\n\n“Ze hebben een andere route gevonden,” fluisterde Jill.\n\nCasey beet op zijn lip. Zijn vingers vlogen over het paneel. Nog een poging. Geen tijd om logisch na te denken — alleen instinct.\n\nBIEP…\n\nIets kraakte in de gang. Een metalen kast viel om. Schaduwen bewogen.\n\n“Als je een truc weet, Casey,” siste Jill, “dan is nú het moment.”"
+      },
+      "hint": {
+        "nl": "Let goed op de andere wetenschappers"
+      },
+      "desc": {
+        "nl": "Jill haar code is JA-P05"
+      },
+      "answer": [
+        "CM-F04",
+        "Cm-F04",
+        "cm-f04",
+        "Cm-f04"
+      ],
+      "background": "assets/bg5.jpg",
+      "image": "",
+      "buttons": {
+        "nl": [
+          {
+            "label": "Personeelsbestand",
+            "action": "overlay",
+            "content": "assets/personeelsbestand.html"
+          }
+        ],
+        "en": []
+      },
+      "time": "600"
+    },
+    {
+      "question": {
+        "nl": "Wat zijn de coordinaten waar ze heen moeten vluchten?"
+      },
+      "intro": {
+        "nl": "Het paneel piepte, dit keer groen.\n\nBIEP. TOEGANG VERLEEND.\n\nDe deur schoof open met een zware zucht. Casey Martens en Jill Annadera wisselden een korte blik, zeiden niets. Ze renden.\n\nDe trap kronkelde omhoog, ijzeren treden dreunden onder hun voeten. Van beneden kwamen nog vage geluiden – iets bewoog zich door de gangen, te snel, te wild.\n\nBovenin sloeg het daglicht hen in het gezicht. Ze trapten de deur naar het heliplatform open en stormden naar buiten.\n\nToen hielden ze allebei abrupt stil.\n\nOp het platform stond géén helikopter.\n\nIn plaats daarvan zat, op de rand van het betonnen dek, een gigantische pterosauriër. Vleugels gespreid, ogen fel en gericht op hen. Zijn snavel was lang, gekarteld als een visnetmes, en zijn klauwen sloegen ritmisch op de grond alsof hij wachtte op beweging.\n\n“Nee… nee nee nee,” fluisterde Jill. “Waar is de heli?”\n\nCasey keek naar de lege landingsmarkeringen. Alleen nog sporen in het stof. Ze waren weer te laat.\n\nDe pterosauriër krijste. Een schel, ijselijk geluid dat de lucht deed trillen.\n\n“We moeten hier weg,” zei Casey.\n\nJill kneep haar ogen tot spleetjes.\n\n“Bij de oude faciliteiten zijn evac-punten! De exacte locatie is alleen zwaar geheim”\nCasey knikte, slechts subtiele hints zijn bekend bij het personeel."
+      },
+      "hint": {},
+      "desc": {
+        "nl": "Prehistorische flora en fauna wordt op dit eiland onderzocht.\nDe juiste punten vinden is een barre tocht.\nBij calamiteiten van stroom, houd dan alleen maar rechts aan.\nDe elektriciteitscentrale zal daar staan.\nBij evacuatie zoek dan geen toren, geen dinosaurus, maar slechts een kas vol plant,\nDaar ligt vrijheid, als alle noodhulp strandt."
+      },
+      "answer": [
+        "XC",
+        "CX",
+        "xc",
+        "cx"
+      ],
+      "background": "assets/bg7.jpg",
+      "image": "",
+      "buttons": {
+        "nl": [
+          {
+            "label": "Kaart",
+            "action": "overlay",
+            "content": "assets/vintagekaart.jpg"
+          }
+        ],
+        "en": []
+      },
+      "time": "300"
+    },
+    {
+      "question": {
+        "nl": "Over welke dino gaat dit?"
+      },
+      "intro": {
+        "nl": "“Hier,” zei ze, wijzend op een omcirkeld punt in het zuiden. “De centrale kas. Vroeger een back-up evac-zone voor botanische teams.”\n\n“Met eigen communicatielijn en toegang tot de oostelijke kustlijn,” knikte Casey. “Misschien zelfs nog een shuttlepad.”\n\nZe lieten het platform achter zich en baanden zich stilletjes een weg door het overgroeide terrein. De paden waren verlaten, maar de geur van dode planten, rottend vlees en rook hing zwaar in de lucht.\n\nNa twintig minuten bereikten ze een oud diensthek – verroest maar stevig, met daarachter het pad naar de kas.\n\nEen vergrendelingspaneel knipperde zwak aan de zijkant van het hek.\n\n“Natuurlijk,” mompelde Jill. “Altijd een code.. Wat staat er op het hek”"
+      },
+      "hint": {},
+      "desc": {
+        "nl": "\"Ik ben een onsterfelijke krijger\""
+      },
+      "answer": [
+        "Apatosaurus ajax",
+        "Apatosaurus Ajax",
+        "apatosaurus ajax"
+      ],
+      "background": "assets/bg8.jpg",
+      "image": "",
+      "buttons": {
+        "nl": [
+          {
+            "label": "Encyclopedie",
+            "action": "overlay",
+            "content": "assets/boekje.html"
+          }
+        ],
+        "en": []
+      }
+    },
+    {
+      "question": {
+        "nl": "Wat is de activatiecode?"
+      },
+      "intro": {
+        "nl": "Het pad naar de centrale kas leek eindelijk vrij, tot Casey plotseling stilhield. Voor hen torende een elektronisch hek op – oud, verroest, maar nog intact. De poort zat muurvast. Geen beweging.\n\nEen groen controlelampje aan de zijkant knipperde langzaam… en doofde.\n\n“Stroom is weg,” zei Casey.\n\nJill liep naar het bedieningspaneel, drukte een paar toetsen in. Niets. Alleen het doffe klik van een dood circuit.\n\n“We komen er niet doorheen zonder voeding. Alles zit nog op het oude net.”\n\nCasey keek naar de zijkant van het pad. Onder het onkruid stak een bord uit de grond, deels overgroeid:\n\n\"Transformator 3A – onderhoudspad 200 meter →\"\n\n“Dat is onze kans,” zei hij. “Als we die generator kunnen opstarten, krijgen we het hek misschien open.”\n\nDe wind trok aan de bomen. In de verte klonk een rauwe, diepe gil. Iets werd opgejaagd… of was aan het jagen.\n\nJill haalde haar adem in.\n\n“Als we dat huisje vinden, moeten we snel zijn. Geen getreuzel.”\n\nZe bogen af van het pad, het bos in. Takken kraakten onder hun voeten. Vogels zwegen. Alleen het geritsel van iets groots, ergens dieper tussen de bomen.\nNa een paar minuten dook het op tussen de bomen: een betonnen blokhut, half overwoekerd met klimop, begroeiing tot aan het dak. De deur hing scheef aan één scharnier. Op de zijkant was nog net een Blackstone-logo te herkennen, vaag onder de modder en mos.\n\n“Energieprotocol 3A – voer activatiecode in om het systeem op te starten.”\n\n"
+      },
+      "hint": {},
+      "desc": {
+        "nl": "Zet ze in alfabetische volgorde"
+      },
+      "answer": [
+        "Aacjjm",
+        "AACJJM",
+        "aacjjm"
+      ],
+      "background": "assets/bg9.jpg",
+      "image": "assets/transformator.jpg",
+      "buttons": {
+        "nl": [],
+        "en": []
+      }
+    },
+    {
+      "question": {
+        "nl": "Hoeveel eet één Compsognathus per dag in kg? Rond af naar hele dagen"
+      },
+      "intro": {
+        "nl": "De code is juist en het stroom schiet aan!\nDe metalen poort kraakte open, traag als een oud ademhalingsapparaat. Casey Martens hield zijn machete laag, klaar voor wat dan ook – maar het enige wat naar buiten kwam, was wind. Vochtig, warm, alsof het eiland zelf uitademde.\n\nVoor hen lag de centrale kas. Een gigantisch karkas van staal en glas, half overwoekerd, de rest verzwolgen door schaduwen. Brede ramen waren gescheurd of volledig verdwenen. De omlijsting was verroest, maar hield nog stand.\n\n“Deze plek zou al jaren buiten gebruik zijn,” zei Jill Annadera zacht.\n\n“Wat ook niet betekent dat het leeg is,” antwoordde Casey.\n\nZe stapten naar binnen.\n\nBinnenin voelde het als een andere wereld: vochtig, dichtbegroeid, ruikend naar natte aarde en oud plastic. De stellingen waren scheefgezakt onder hun eigen gewicht. Er groeiden planten die hier nooit thuishoorden – vreemd gekrulde bladeren, witte aders, paarse bloei. Geen labels. Geen structuur.\n\nAan de rechterzijde brandde zwak een noodbalk. Jill vond een oude controleterminal, gehuld in spinrag.\n\n“Als we evacuatiegegevens vinden, dan hier,” zei ze.\n\nZe tikte op het scherm. Het flikkerde tot leven.\n\n\"DATA BEPERKT – TOEGANG BEPERKT TOT PERSONEELSKERN A-3”\n\n“Misschien is er een archief,\" zei Casey, \"of een datastation waar we meer vinden.”\n\nZe volgden een zijpad door de kas, langs een muur vol scheefgezakte opslagbakken. Plots hield Jill stil.\n\n“Hoorde je dat?”\n\nEen zacht, schurend geluid. Iets schuifde. Dichtbij.\n\nZe slopen verder. Achter een gebroken venster ontdekten ze een deur die niet op de originele plattegrond stond. Geen bordje, geen markering. Alleen een smalle toegang en een veeg modder die erop wees dat er recent nog iemand doorheen was gegaan.\n\nCasey keek naar Jill. Zij knikte.\n\nHij drukte de deur open. Een korte gang, een luik, en dan: een onverwachte ruimte. Koel. Afgezonderd. Aan de muur hing een controlekast met het logo van een project dat Casey nooit eerder had gezien.\n\n“Project AvesGenesis – toegang alleen met activatiecode”\nIn een kas vol planten, wil ik weten hoeveel een Compsognathus kan opeten.\n\n“Hier is iets,” fluisterde Jill. “Iets wat we nooit hadden mogen vinden.”"
+      },
+      "hint": {},
+      "desc": {
+        "nl": "Een Brachiosaurus eet dagelijks 60 kg planten. Een Stegosaurus eet 1/3 daarvan. Samen eten ze in 5 dagen evenveel als een kudde van 20 Compsognathus in 3 dagen. "
+      },
+      "answer": [
+        "7"
+      ],
+      "background": "assets/bg10.jpg",
       "image": "",
       "buttons": {
         "nl": [],
         "en": []
       }
+    },
+    {
+      "question": {
+        "nl": "Wat is de code?"
+      },
+      "intro": {
+        "nl": "De controlekast gaf een korte BIEP en het paneel schoof open. Daarachter zat een oud slotmechanisme dat met een mechanische klik werd ontgrendeld. Het luik in de vloer zwaaide moeizaam open.\n\nCasey Martens haalde zijn zaklamp tevoorschijn. Een steile metalen trap leidde naar beneden, de duisternis in. De lucht daaronder rook anders — geen planten of grond, maar koelvloeistof, kunststof en… iets levends.\n\n“Dit is geen opslag,” zei Jill Annadera.\n\n“Nee. Dit is gebouwd om verborgen te blijven.”\n\nZe daalden af, één voor één. Onderin kwamen ze in een ruimte die deed denken aan een ondergrondse bunker. Alles was strak, modern, functioneel. Zilvergrijze wanden, actieve terminals, energiepanelen die nog werkten dankzij een aparte stroombron.\n\nAan de muur hing een verlicht logo:\n\n“PROJECT AVESGENESIS – Private Unit”\n\nOp een centraal beeldscherm flitsten real-time grafieken voorbij: lichaamstemperaturen, hartslagen, voedselinname, gedragsscores. Niet van mensen.\n\n“Dino’s…” fluisterde Jill. “Ze houden ze hier… levend. In observatie.”\n\nCasey liep door een smalle deur naar een glazen wand. Daarachter bevond zich een habitat, verlicht met warm licht. Binnen renden kleine, slanke dinosaurussen door een bosrijke omgeving, met vreemde tuigjes om hun rug. Ze bewogen slim. Reageerden op lichtsignalen. Werkten zelfs samen.\n\nNiet wild. Niet dom. Getraind.\n\n“Ze zijn gemodificeerd,” zei Jill. “Niet op instinct, maar op gedrag. Geprogrammeerd.”\n\nAan de zijkant zagen ze een deur, welke naar een kleine ruimte leide. Ze stapten binnen en zagen daar proefdino's in kooien.\nLagen hier de antwoorden die ze zochten om hier weg te komen?\nAchter in de ruimte was een gesloten deur, met daar boven:\n\n“ALLEEN BETREDEN BIJ STABIEL GEDRAG – CODE VEREIST”\n\nCasey keek naar de ruimte, naar de dieren. Eén van hen keek terug, lang en stil, alsof hij begreep dat hij bekeken werd.\n\n“Dit was nooit het plan van Blackstone,” zei hij. “Dit is van iemand anders. Kijk maar naar het logboek.... Ik ga hier niet weg voordat ik weet wat hier aan de hand is!\""
+      },
+      "hint": {
+        "nl": "Hoe moet je de code interpreteren?"
+      },
+      "desc": {
+        "nl": "Logboekfragment -\nOnderwerp: Genetische stabiliteit - Specimenreeks A9\n\nVan de negen specimens is alleen nummer 9 gedragstechnisch stabiel gebleven.\nOuttake: Nu snap ik hoe ik de codes in het DNA moet aflezen.\nReeksen 1 t/m 8 vertoonden ongecontroleerde agressie binnen 72 uur.\nOuttake: Combineer nooit de DNA en RNA zonder compressies.\nSubject 9 reageert op stimulusreeksen zoals gepland – geen afwijkingen.\nOuttake: ALLE testen op subject 9 zijn uitgevoerd\nCodes van dit project interpreteren zijn cruciaal\nOuttake: De laatste was eigenlijk de eerste, als je het goed bekeek.\nVerdere documentatie verplaatst naar kluis – toegang alleen voor Unit K.\nMorgen maar verder"
+      },
+      "answer": [
+        "118118",
+        "118 118"
+      ],
+      "background": "assets/bg11.jpg",
+      "image": "assets/lab.jpg",
+      "buttons": {
+        "nl": [],
+        "en": []
+      }
+    },
+    {
+      "question": {
+        "nl": "Hoe oud is het fosiel?"
+      },
+      "intro": {
+        "nl": "Het kantoor was stoffig, maar alles stond precies waar het moest staan. Geen chaos, geen paniek, geen spoor van haast. Dat was juist wat Casey Martens het meest verontrustte.\n\nOp het bureau lag een gesloten map. Daarop stond een naam die hij zojuist eerder had gezien:\n\n“Project AvesGenesis – Lokaal Commandoniveau / Alleen intern gebruik”\n\nJill Annadera bladerde voorzichtig door de inhoud. Tussendoor – medische scans, gedragstabellen, plattegronden. Maar geen namen. Geen ondertekenaars.\n\n“Iemand heeft z’n best gedaan om zichzelf te wissen,” mompelde ze.\n\nAchter het bureau zat een kleine wandkluis. Digitaal slot. Erboven: C14=6,25%\n\n'C14 gebruiken we voor het dateren van fossielen... Riep Jill. Dit moet hiermee te maken hebben! Iedere keer als dit halveert duurt dat 5730 jaar. Dus van 100 naar 50%, maar ook van 2% naar 1%!\n"
+      },
+      "hint": {
+        "nl": "C14 breekt heel langzaam af.  Iedere keer als dit halveert duurt dat 5730 jaar. Dus van 100 naar 50%, maar ook van 2% naar 1%"
+      },
+      "desc": {
+        "nl": "Een fossiel bevat nog 6,25% C14. De halfwaardetijd is 5.730 jaar."
+      },
+      "answer": [
+        "22900"
+      ],
+      "background": "assets/bg121.jpg",
+      "image": "",
+      "buttons": {
+        "nl": [],
+        "en": []
+      },
+      "time": "600"
     }
   ],
   "endScreen": {
